@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            padding-top: 60px;
+            min-height: 100vh;
+            background-image: url("C:\Users\Poorva\OneDrive\문서\project\images\aboutusbgimg.jpg");
+            background-size: cover;
+            position: relative;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Translucent white overlay */
+            z-index: -1;
+        }
+
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #2A9D8F;
+            padding: 22px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 34px;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .navbar .links {
+            display: flex;
+
+        }
+
+        .navbar .links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.847);
+            /* Light text color */
+            margin-right: 25px;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease;
+            padding: 5px 10px;
+            /* Smooth hover effect */
+        }
+
+        .navbar .links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .navbar .links a:hover {
+            color: white;
+        }
+
+        .navbar .links a:hover::after {
+            width: 100%;
+        }
+
+        /* Secondary Navbar */
+        .secondary-navbar {
+            background-color: #E8F8F5;
+            /* Slightly lighter green */
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            top: 43px;
+            /* Adjust to fit below the main navbar */
+            width: 100%;
+            height: 28px;
+            z-index: 999;
+        }
+
+        .secondary-navbar a {
+            text-decoration: none;
+            color: rgb(10, 80, 80);
+            font-size: 14px;
+            padding: 8px 12px;
+            transition: transform 0.2s ease, color 0.3s ease;
+        }
+
+        .secondary-navbar a:hover {
+            color: #daf3eb;
+            transform: scale(1.1);
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            /* Dropdown background */
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Add shadow */
+            z-index: 1;
+            border-radius: 4px;
+            animation: fadeIn 0.3s ease;
+            /* Add fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dropdown links */
+        .dropdown-content a {
+            color: #035e4f;
+            /* Greenish text */
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            /* Smooth hover effect */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #daf3eb;
+            /* Light green background */
+            color: #035e4f;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+
+
+
+        /* Contact Section Styles */
+        .contact {
+            position: relative;
+            min-height: calc(100vh - 150px);
+            /* Subtract navbar heights */
+            padding: 20px 40px;
+            display: flex;
+            margin-top: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+                url('C:/Users/Poorva/OneDrive/문서/project/images/61802.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .content h2 {
+            font-size: 30px;
+            font-weight: 500;
+            color: #2a614f;
+            margin-bottom: 7px;
+        }
+
+        .content p {
+            font-size: 14px;
+            font-weight: 300;
+            color: #2a614f;
+            line-height: 1.4;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contactinfo {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .box {
+            width: 100%;
+            margin-left: -100px;
+            position: relative;
+            padding: 15px;
+            display: flex;
+            background: rgba(92, 202, 159, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(92, 202, 159, 0.2);
+        }
+
+        .box:hover {
+            transform: translateY(-3px);
+            background: rgba(92, 202, 159, 0.15);
+        }
+
+        .icon {
+            min-width: 45px;
+            height: 45px;
+            background-color: #5CCA9F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .text {
+            margin-left: 15px;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+
+        .text h3 {
+            font-weight: 500;
+            margin-bottom: 3px;
+            font-size: 16px;
+        }
+
+        .contactform {
+            width: 40%;
+            padding: 25px;
+            margin-right: -70px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .contactform h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .inputbox {
+            position: relative;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .inputbox input,
+        .inputbox textarea {
+            width: 100%;
+            padding: 6px 0;
+            font-size: 14px;
+            margin: 8px 0;
+            border: none;
+            border-bottom: 2px solid #ddd;
+            outline: none;
+            resize: none;
+        }
+
+        .inputbox span {
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 14px;
+            margin: 8px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: #666;
+        }
+
+        .inputbox input:focus~span,
+        .inputbox textarea:focus~span,
+        .inputbox input:valid~span,
+        .inputbox textarea:valid~span {
+            color: #5CCA9F;
+            font-size: 11px;
+            transform: translateY(-18px);
+        }
+
+        .inputbox input[type="submit"] {
+            width: 130px;
+            background: #5CCA9F;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .inputbox input[type="submit"]:hover {
+            background: #3EC5AB;
+        }
+
+        @media(max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .links {
+                gap: 1rem;
+            }
+
+            .contact {
+                margin-top: 140px;
+                padding: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .contactinfo,
+            .contactform {
+                width: 100%;
+            }
+
+            .box {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="C:\Users\Poorva\OneDrive\문서\project\images\cachet logo.png" alt="Logo">
+        </div>
+        <div class="links">
+            <a href="homepage.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#">Offers</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <!-- Secondary Navbar -->
+    <div class="secondary-navbar">
+        <div class="dropdown">
+            <a href="#">Prescription Drugs</a>
+            <div class="dropdown-content">
+                <a href="#">Antibiotics</a>
+                <a href="#">Painkillers</a>
+                <a href="#">Allergy Medications</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Health Conditions</a>
+            <div class="dropdown-content">
+                <a href="#">Heart Health</a>
+                <a href="#">Diabetes Care</a>
+                <a href="#">Skin Care</a>
+                <a href="#">Gastric Health</a>
+                <a href="#">Neural Health</a>
+            </div>
+        </div>
+        <a href="#">Vitamins & Supplements</a>
+        <a href="#">Medical Devices</a>
+        <a href="#">Find Doctors</a>
+    </div>
+
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>We're here to help!</p>
+        </div>
+        <div class="container">
+            <div class="contactinfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>415, Shah And Nahar Industrial Estate, Dr E Moses Road, Worli, Mumbai, Maharashtra 400018</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+91-2240829999</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>hrd@cachetindia.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactform">
+                <form id="contactForm" action="/contact" method="post">
+                    <h2>Send Message</h2>
+                    <div class="inputbox">
+                        <input type="text" id="full_name" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" id="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                        <textarea required="required" id="message" rows="3"></textarea>
+                        <span>Type your message...</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" value="Send Message">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page reload
+    
+            // Get values using getElementById()
+            let full_name = document.getElementById("full_name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+    
+            fetch("http://localhost:4000/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ full_name, email, message })  // Send correct variable names
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message); // Show success message
+                window.location.href = "homepage.html"; // Redirect to homepage
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Failed to send message. Please try again.");
+            });
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+       
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background: url('C:/Users/Poorva/OneDrive/문서/project/images/bg2.jpg');
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* White translucent overlay */
+            background-blend-mode: overlay;
+            /* Blend the overlay with the image */
+        }
+
+
+
+
+        .thank-you-container {
+
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 450px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .thank-you-container h2 {
+            color: #32a891;
+            font-size: 28px;
+            margin-bottom: 15px;
+            animation: slideDown 1.5s ease;
+        }
+
+        .thank-you-container p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .thank-you-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #32a891;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .thank-you-container a:hover {
+            background-color: #28a17a;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #32a891;
+            margin-bottom: 15px;
+            animation: popIn 1.2s ease;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="thank-you-container">
+        <div class="icon">✔</div>
+        <h2>Thank You for Connecting!</h2>
+        <p>
+            Your inquiry has been received. We will let you know about the availability of your medicines shortly.
+            Thank you for your cooperation!
+        </p>
+        <a href="homepage.html">Go Back to Homepage</a>
+    </div>
+</body>
+
+</html>
