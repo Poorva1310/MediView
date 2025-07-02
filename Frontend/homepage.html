@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="C:\Users\Poorva\OneDrive\문서\project\images\cachet logo.png" alt="Logo">
+        </div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#">Offers</a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <!-- Secondary Navbar -->
+    <div class="secondary-navbar">
+        <div class="dropdown">
+            <a href="#">Lifecare</a>
+            <div class="dropdown-content">
+                <a href="#">Antibiotics</a>
+                <a href="#">Painkillers</a>
+                <a href="#">Allergy Medications</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Pharma</a>
+            <div class="dropdown-content">
+                <a href="#">Heart Health</a>
+                <a href="#">Diabetes Care</a>
+                <a href="#">Skin Care</a>
+                <a href="#">Gastric Health</a>
+                <a href="#">Neural Health</a>
+            </div>
+        </div>
+        <a href="#">Healthcare</a>
+        <a href="#">Multivitamins</a>
+
+    </div>
+    <div class="search-section">
+        <svg class="background-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+            <path d="M0 150 Q 300 100 600 150 Q 900 200 1200 150 L1200 200 L0 200 Z" fill="#F5F8FF" opacity="0.5" />
+            <path d="M0 175 Q 300 125 600 175 Q 900 225 1200 175 L1200 200 L0 200 Z" fill="#EDF2FF" opacity="0.3" />
+            <circle cx="100" cy="50" r="40" fill="#F0F4FF" opacity="0.2" />
+            <circle cx="1100" cy="100" r="60" fill="#F0F4FF" opacity="0.2" />
+        </svg>
+        <div class="search-bar">
+            <input type="text" placeholder="What are you looking for?">
+            <button>Search</button>
+        </div>
+    </div>
+    <!--Categories-->
+    <div class="categories-container">
+        <h2>Shop by Category</h2>
+        <div class="category-box">
+            <div class="category-title">Anti-Infective</div>
+            <button class="pre-btn"><img src="C:/Users/Poorva/OneDrive/문서/project/images/left-arrow.png"
+                    alt=""></button>
+            <button class="nxt-btn"><img src="C:\Users\Poorva\OneDrive\문서\project\images\arrow-right.png"
+                    alt=""></button>
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="product-info">
+                        <img src="C:\Users\Poorva\OneDrive\문서\project\images\Lysoflam.png" alt="Lysoflam">
+                        <div class="item-name">Lysoflam Tablet</div>
+                        <div class="item-price">₹400</div>
+                    </div>
+                    <div class="product-actions">
+                        <button onclick="viewProduct('Lysoflam')">View Product</button>
+                        <button onclick="addToCart(event, 'Lysoflam')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="product-info">
+                        <img src="C:\Users\Poorva\OneDrive\문서\project\images\Lysoflam.png" alt="Lysoflam">
+                        <div class="item-name">Lysoflam Tablet</div>
+                        <div class="item-price">₹400</div>
+                    </div>
+                    <div class="product-actions">
+                        <button onclick="viewProduct(event, 'Lysoflam')">View Product</button>
+                        <button onclick="addToCart(event, 'Lysoflam')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="product-info">
+                        <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (2).jpeg" alt="Alprovit">
+                        <div class="item-name">Alprovit</div>
+                        <div class="item-price">₹400</div>
+                    </div>
+                    <div class="product-actions">
+                        <button onclick="viewProduct(event, 'Alprovit')">View Product</button>
+                        <button onclick="addToCart(event, 'Alprovit')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="product-info">
+                        <img src="C:\Users\Poorva\OneDrive\문서\project\images\Lysoflam.png" alt="Lysoflam">
+                        <div class="item-name">Lysoflam Tablet</div>
+                        <div class="item-price">₹400</div>
+                    </div>
+                    <div class="product-actions">
+                        <button onclick="viewProduct(event, 'Lysoflam')">View Product</button>
+                        <button onclick="addToCart(event, 'Lysoflam')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="product-info">
+                        <img src="C:\Users\Poorva\OneDrive\문서\project\images\Lysoflam.png" alt="Lysoflam">
+                        <div class="item-name">Lysoflam Tablet</div>
+                        <div class="item-price">₹400</div>
+                    </div>
+                    <div class="product-actions">
+                        <button onclick="viewProduct(event, 'Lysoflam')">View Product</button>
+                        <button onclick="addToCart(event, 'Lysoflam')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (5).jpeg" alt="Personal Care 2">
+                    <div class="item-name">ALPROVI</div>
+                    <div class="item-price">₹400</div>
+                    <div class="product-actions">
+                        <button onclick="viewProduct('Lysoflam Tablets')">View Product</button>
+                        <button onclick="addToCart('Lysoflam Tablets')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (5).jpeg" alt="Personal Care 2">
+                    <div class="item-name">ALPROVI</div>
+                    <div class="item-price">₹400</div>
+                    <div class="product-actions">
+                        <button onclick="viewProduct('Lysoflam Tablets')">View Product</button>
+                        <button onclick="addToCart('Lysoflam Tablets')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (5).jpeg" alt="Personal Care 2">
+                    <div class="item-name">ALPROVI</div>
+                    <div class="item-price">₹400</div>
+                    <div class="product-actions">
+                        <button onclick="viewProduct('Lysoflam Tablets')">View Product</button>
+                        <button onclick="addToCart('Lysoflam Tablets')">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="view-more">
+                <a href="#">View More Products</a>
+            </div>
+        </div>
+
+        <div class="category-box">
+            <div class="category-title">Pain Relief</div>
+            <button class="pre-btn"><img src="C:\Users\Poorva\OneDrive\문서\project\images\left-arrow.png"
+                    alt=""></button>
+            <button class="nxt-btn"><img src="C:\Users\Poorva\OneDrive\문서\project\images\arrow-right.png"
+                    alt=""></button>
+            <div class="category-grid">
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (3).jpeg" alt="Skin Care 1">
+                    <div class="item-name">ALPROVIT</div>
+                    <div class="item-price">₹350</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (5).jpeg" alt="Skin Care 2">
+                    <div class="item-name">ALPROVIT</div>
+                    <div class="item-price">₹250</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (5).jpeg" alt="Personal Care 2">
+                    <div class="item-name">ALPROVIT</div>
+                    <div class="item-price">₹400</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (6).jpeg" alt="Personal Care 2">
+                    <div class="item-name">ALPROVI</div>
+                    <div class="item-price">₹400</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (7).jpeg" alt="Personal Care 2">
+                    <div class="item-name">Thermoscan</div>
+                    <div class="item-price">₹400</div>
+                </div>
+
+            </div>
+            <div class="view-more">
+                <a href="#">View More Products</a>
+            </div>
+        </div>
+
+        <div class="category-box">
+            <div class="category-title">LIFECARE</div>
+            <button class="pre-btn"><img src="C:\Users\Poorva\OneDrive\문서\project\images\left-arrow.png"
+                    alt=""></button>
+            <button class="nxt-btn"><img src="C:\Users\Poorva\OneDrive\문서\project\images\arrow-right.png"
+                    alt=""></button>
+            <div class="category-grid">
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\Lysoflam.png" alt="Lysoflam Tablets">
+                    <div class="item-name">Lysoflam Tablets</div>
+                    <div class="item-price">₹350</div>
+                    <div class="product-actions">
+                        <button onclick="viewProduct('lysoflam')">View Product</button>
+                        <button onclick="addToCart('lysoflam')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\Lysoflam Forte.png" alt="Skin Care 2">
+                    <div class="item-name">Lysoflam Forte</div>
+                    <div class="item-price">₹250</div>
+                    <div class="tooltip">The enzymatic preparation of Trypsin-Chymotrypsin is a used in the patients
+                        with
+                        inflammation. It helps relieve pain and swelling in post-operative wounds and other
+                        inflammatory diseases. Lysoflam Forte helps patients to have a faster relief and
+                        faster recovery. Lysoflam Forte can be taken with or without food.</div>
+                </div>
+
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\Fornerve NT.png" alt="Personal Care 2">
+                    <div class="item-name">Fornerve </div>
+                    <div class="item-price">₹400</div>
+                    <div class="tooltip">Fornerve NT is a combination of Pregabalin, Nortriptyline &amp; Methylcobalamin
+                        which
+                        is used to treat all form of neuropathic pain. Fornerve NT offers 24 hour pain relief
+                        and dosage convenience of once daily. Fornerve NT treats the root cause of
+                        neuropathic pain by repairing the myelin sheath and offers better nerve conduction.</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (7).jpeg" alt="Personal Care 2">
+                    <div class="item-name">NE 400 Sofgels</div>
+                    <div class="item-price">₹400</div>
+                    <div class="tooltip">Vitamin E in its natural form, NE. Natural vitamin E, NE is available in 400 mg
+                        and in
+                        Sofgel form. NE is obtained from natural source and has α tocopherol which is also
+                        the most active form of Vitamin E. NE offers multiple benefits in Non-Alcoholic Fatty
+                        Liver Disease, Skin, Eyes &amp; Hair Health by reducing the free radical damage and
+                        controlling the inflammatory biomarkers. NE offers various beneficial effects on
+                        female reproductive health</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\NE C.png" alt="Personal Care 2">
+                    <div class="item-name">NE-C Tablets</div>
+                    <div class="item-price">₹400</div>
+                    <div class="tooltip">An ideal combination of L-Carnitine, Methylcobalamin &amp; Folic acid which
+                        serves as a
+                        natural energizer. NE-C ensures energy metabolism, improves body strength and
+                        energy levels. NE-C reduces muscle pain associated with muscle cramps &amp;
+                        nocturnal cramps</div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#">View More Products</a>
+            </div>
+        </div>
+
+        <div class="category-box">
+            <div class="category-title">Anti-Diabetic</div>
+            <button class="pre-btn"><img src="C:\Users\Poorva\OneDrive\문서\project\images\left-arrow.png"
+                    alt=""></button>
+            <button class="nxt-btn"><img src="C:\Users\Poorva\OneDrive\문서\project\images\arrow-right.png"
+                    alt=""></button>
+            <div class="category-grid">
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (3).jpeg" alt="Skin Care 1">
+                    <div class="item-name">ALPROVI</div>
+                    <div class="item-price">₹350</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (5).jpeg" alt="Skin Care 2">
+                    <div class="item-name">Sunscreen</div>
+                    <div class="item-price">₹250</div>
+                </div>
+
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (6).jpeg" alt="Personal Care 2">
+                    <div class="item-name">Thermoscan</div>
+                    <div class="item-price">₹400</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (7).jpeg" alt="Personal Care 2">
+                    <div class="item-name">Thermoscan</div>
+                    <div class="item-price">₹400</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (9).jpeg" alt="Personal Care 2">
+                    <div class="item-name">Thermoscan</div>
+                    <div class="item-price">₹400</div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#">View More Products</a>
+            </div>
+        </div>
+
+        <div class="category-box">
+            <div class="category-title">Skin Health</div>
+            <button class="pre-btn"><img src="C:\Users\Poorva\OneDrive\문서\project\images\left-arrow.png"
+                    alt=""></button>
+            <button class="nxt-btn"><img src="C:\Users\Poorva\OneDrive\문서\project\images\arrow-right.png"
+                    alt=""></button>
+            <div class="category-grid">
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (3).jpeg" alt="Skin Care 1">
+                    <div class="item-name">ALPROVI</div>
+                    <div class="item-price">₹350</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (5).jpeg" alt="Skin Care 2">
+                    <div class="item-name">Sunscreen</div>
+                    <div class="item-price">₹250</div>
+                </div>
+
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (6).jpeg" alt="Personal Care 2">
+                    <div class="item-name">Thermoscan</div>
+                    <div class="item-price">₹400</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (7).jpeg" alt="Personal Care 2">
+                    <div class="item-name">Thermoscan</div>
+                    <div class="item-price">₹400</div>
+                </div>
+                <div class="category-item">
+                    <img src="C:\Users\Poorva\OneDrive\문서\project\images\download (9).jpeg" alt="Personal Care 2">
+                    <div class="item-name">Thermoscan</div>
+                    <div class="item-price">₹400</div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#">View More Products</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const items = document.querySelectorAll('.category-item');
+            const nextBtn = document.querySelector('.nxt-btn');
+            const prevBtn = document.querySelector('.pre-btn');
+            const grid = document.querySelector('.category-grid');
+
+            // Add click handlers for zoom effect
+            items.forEach(item => {
+                item.addEventListener('click', function (e) {
+                    // Don't trigger if clicking buttons
+                    if (e.target.tagName === 'BUTTON') return;
+
+                    // Remove active/inactive classes from all items
+                    items.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.classList.add('inactive');
+                        }
+                    });
+
+                    // Toggle active class on clicked item
+                    if (item.classList.contains('active')) {
+                        items.forEach(otherItem => {
+                            otherItem.classList.remove('inactive');
+                        });
+                        item.classList.remove('active');
+                    } else {
+                        item.classList.remove('inactive');
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // Close active item when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.category-item')) {
+                    items.forEach(item => {
+                        item.classList.remove('active', 'inactive');
+                    });
+                }
+            });
+
+            // Navigation buttons functionality
+            if (nextBtn && prevBtn) {
+                nextBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: 200, behavior: 'smooth' });
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: -200, behavior: 'smooth' });
+                });
+            }
+        });
+
+        // Product view function
+        function viewProduct(e, productName) {
+            e.stopPropagation(); // Prevent item click event
+            const normalizedId = productName.toLowerCase().replace(/\s+/g, '-');
+            const product = productDetails[normalizedId];
+
+
+        }
+
+        // Add to cart function
+        function addToCart(e, productName) {
+            e.stopPropagation(); // Prevent item click event
+            const normalizedId = productName.toLowerCase().replace(/\s+/g, '-');
+            const product = productDetails[normalizedId];
+
+
+        }
+
+        // Add this to your existing script
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            // Get current count
+            let currentCount = parseInt(cartCount.textContent);
+            // Increment count
+            cartCount.textContent = currentCount + 1;
+        }
+
+        function addToCart(e, productName) {
+            e.stopPropagation();
+            const normalizedId = productName.toLowerCase().replace(/\s+/g, '-');
+            const product = productDetails[normalizedId];
+
+            // You can add the product to the cart logic here if needed
+
+            // Update cart count
+            updateCartCount();
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
